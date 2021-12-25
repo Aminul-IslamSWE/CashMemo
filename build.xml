@@ -12,6 +12,31 @@
     <import file="nbproject/build-impl.xml"/>
     <!--
 
+/* software quality Assrance testing lab */
+
+
+
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="CashMemo" default="default" basedir=".">
+    <description>Builds, tests, and runs the project CashMemo.</description>
+    <import file="nbproject/build-impl.xml"/>
+
+
+  <target name="-post-compile">
+            <obfuscate>
+                <fileset dir="${build.classes.dir}"/>
+            </obfuscate>
+        </target>
+
+
+
+
+
+
+
     There exist several targets which are by default empty and which can be 
     used for execution of your tasks. These targets are usually executed 
     before and after some main targets. They are: 
